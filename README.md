@@ -1,2 +1,2 @@
-# architectural_intelligence
-Threat intelligence for architects
+# Architectural Intelligence
+Threat intelligence for architects.

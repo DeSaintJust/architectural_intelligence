@@ -1,0 +1,19 @@
+**Initial Access - Valid Accounts (T1078):** Threat actors can exploit weak or compromised credentials to gain unauthorized access to an Amazon Elastic Beanstalk environment. This initial access can allow them to deploy malicious applications or manipulate existing environments. It's crucial to enforce strong authentication practices and monitor for unusual login activity to detect unauthorized access.
+
+**Execution - Command and Scripting Interpreter (T1059):** Malicious code execution within Elastic Beanstalk environments can be facilitated through command and scripting interpreters such as Bash or PowerShell. Attackers can exploit vulnerabilities in deployed applications or use misconfigurations to execute scripts that initiate unauthorized processes. Monitoring script execution and applying principle of least privilege can mitigate this risk.
+
+**Persistence - Application Layer Protocol (T1071):** Once inside the environment, adversaries may establish persistence by modifying application code or configurations. This ensures their malicious activities continue after initial execution. Regular code reviews and using version control with automatic rollbacks can help detect and reverse unauthorized changes.
+
+**Privilege Escalation - Abuse Elevation Control Mechanism (T1548):** Threat actors may seek to elevate their privileges within an Elastic Beanstalk environment by exploiting misconfigured permission settings or application vulnerabilities. Implementing strict Identity and Access Management (IAM) roles, permissions reviews, and leveraging AWS Identity and Access Management features to limit privilege escalation opportunities are essential defenses.
+
+**Defense Evasion - Obfuscated Files or Information (T1027):** Attackers might use obfuscation techniques on files and scripts to evade detection in an Elastic Beanstalk environment. They can hide the true intent of their malicious payloads, making it harder for security tools to identify threats. Employing advanced threat detection solutions and understanding normal application behavior are ways to counteract this technique.
+
+**Credential Access - Cloud Credentials (T1552.001):** Securing AWS credentials is critical, as attackers can target these to gain broader access to the Elastic Beanstalk environment or related AWS services. Implementing AWS Secrets Manager and ensuring credentials are never hardcoded but dynamically loaded is a key preventive measure.
+
+**Discovery - Cloud Service Discovery (T1580):** Adversaries conduct cloud service discovery to understand the setup and architecture of an Elastic Beanstalk deployment. They can identify resources, configurations, and network settings to plan further exploits. Logging and monitoring API calls with AWS CloudTrail can help detect unauthorized attempts at service discovery.
+
+**Collection - Data from Information Repositories (T1213):** Malicious actors may attempt to collect sensitive data stored within Elastic Beanstalk environments. This data might include application logs, configuration files, or other sensitive information. Proper encryption and access controls to limit data exposure are critical defensive strategies.
+
+**Exfiltration - Exfiltration Over Application Layer (T1048):** Attackers might exfiltrate data from an Elastic Beanstalk environment using application layer protocols. Monitoring outbound traffic and setting up data loss prevention strategies can help detect and block unauthorized exfiltration attempts.
+
+**Impact - Data Encrypted for Impact (T1486):** Ransomware or unauthorized encryption could be used to disrupt operations by locking access to critical application data hosted in Elastic Beanstalk. Ensuring regular backups and implementing versioning can aid in quick recovery and reduce the impact of such incidents.
